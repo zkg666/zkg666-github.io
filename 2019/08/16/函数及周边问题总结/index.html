@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="函数及周边的问题总结1.函数的作用 函数的封装，就是将一段功能性的代码，放到函数里方便后期使用，当使用的时候，直接调用函数就行了； 基于js封装的库，以及插件中，都是以函数进行的封装 函数几乎能够在咱们整个后期课程中出现  2.创建函数的方式 函数声明 function fn () {};  函数表达式 var fn = function (){};  匿名函数 (function(){})();">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/08/16/函数及周边问题总结/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="函数及周边的问题总结1.函数的作用 函数的封装，就是将一段功能性的代码，放到函数里方便后期使用，当使用的时候，直接调用函数就行了； 基于js封装的库，以及插件中，都是以函数进行的封装 函数几乎能够在咱们整个后期课程中出现  2.创建函数的方式 函数声明 function fn () {};  函数表达式 var fn = function (){};  匿名函数 (function(){})();">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2019-08-16T03:58:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="函数及周边的问题总结1.函数的作用 函数的封装，就是将一段功能性的代码，放到函数里方便后期使用，当使用的时候，直接调用函数就行了； 基于js封装的库，以及插件中，都是以函数进行的封装 函数几乎能够在咱们整个后期课程中出现  2.创建函数的方式 函数声明 function fn () {};  函数表达式 var fn = function (){};  匿名函数 (function(){})();">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-函数及周边问题总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/16/函数及周边问题总结/" class="article-date">
+  <time datetime="2019-08-16T06:25:27.034Z" itemprop="datePublished">2019-08-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="函数及周边的问题总结"><a href="#函数及周边的问题总结" class="headerlink" title="函数及周边的问题总结"></a>函数及周边的问题总结</h2><h3 id="1-函数的作用"><a href="#1-函数的作用" class="headerlink" title="1.函数的作用"></a>1.函数的作用</h3><ul>
+<li>函数的封装，就是将一段功能性的代码，放到函数里方便后期使用，当使用的时候，直接调用函数就行了；</li>
+<li>基于js封装的库，以及插件中，都是以函数进行的封装</li>
+<li>函数几乎能够在咱们整个后期课程中出现</li>
+</ul>
+<h3 id="2-创建函数的方式"><a href="#2-创建函数的方式" class="headerlink" title="2.创建函数的方式"></a>2.创建函数的方式</h3><ul>
+<li><p>函数声明</p>
+<p>function fn () {};</p>
+</li>
+<li><p>函数表达式</p>
+<p>var fn = function (){};</p>
+</li>
+<li><p>匿名函数</p>
+<p>(function(){})();</p>
+<p>注意：==这个函数只能执行一次==</p>
+</li>
+</ul>
+<h3 id="3-函数参数相关的问题"><a href="#3-函数参数相关的问题" class="headerlink" title="3.函数参数相关的问题"></a>3.函数参数相关的问题</h3><ul>
+<li>形参<ul>
+<li>函数括号里面的变量，用来接收实参传递过来的实际参数</li>
+<li>function fn ( 形参 ) { };</li>
+<li>注意：<ul>
+<li>当形参个数多于实参个数，会报出undefined</li>
+<li>使用形参和实参的时候，需要保持个数一致！！</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实参<ul>
+<li>给形参传递具体的参数，可以传递数组，字符串…</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params">x,y,z</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x,y,z);</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">10</span>,<span class="number">20</span>);		<span class="comment">// 10,20，undefined</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-函数的返回值以及函数的状态"><a href="#4-函数的返回值以及函数的状态" class="headerlink" title="4.函数的返回值以及函数的状态"></a>4.函数的返回值以及函数的状态</h3><ul>
+<li>函数可以分为：<ul>
+<li>有返回值的函数</li>
+<li>无返回值的函数</li>
+</ul>
+</li>
+<li>如果在函数中声明了变量，保存了值，如果不加return的话，会报处undefined</li>
+<li>如果使用了return，但是后面没有一个明确的返回值，那么也是undefined</li>
+<li>如果使用了return，后续的代码将不再继续执行</li>
+<li>==补充问题==：<ul>
+<li>return后面还可以再去声明一个函数，到了js高级阶段，我们会接触到一个叫做闭包函数的东西，到时候，请看着办~~</li>
+</ul>
+</li>
+<li>函数的4种状态（了解）<ul>
+<li>有参数无返回值的函数</li>
+<li>有返回值无参数的函数</li>
+<li>无返回值无参数的函数</li>
+<li>有参数有返回值的函数</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num = x + y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f = fn(<span class="number">10</span>,<span class="number">20</span>);</span><br><span class="line"><span class="built_in">console</span>.log(f);		<span class="comment">//	undefined</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-作用域以及作用域链"><a href="#5-作用域以及作用域链" class="headerlink" title="5. 作用域以及作用域链"></a>5. 作用域以及作用域链</h3><ul>
+<li><p>全局作用域</p>
+<ul>
+<li>在函数外部的区域就是全局作用域</li>
+<li>在全局下定义了一个变量或者是声明了一个函数，就在全局最大的对象window上添加了一个属性</li>
+</ul>
+</li>
+<li><p>局部作用域</p>
+<ul>
+<li>在函数内部的区域就属于局部作用域</li>
+</ul>
+</li>
+<li><p>作用域链：</p>
+<ul>
+<li>基本定义：函数内部使用一个声明并且赋值的变量，如果当前作用域内有，那么就执行，否则会沿着当前的作用域依次向上查找，这个查找的过程形成了一个链式结构，我们称之为作用域链</li>
+<li>注意：如果在全局下都没有你要使用的变量，那么直接报错</li>
+</ul>
+</li>
+<li><p>补充问题：</p>
+<ul>
+<li>请问，函数的形参是属于全局的还是局部的？</li>
+<li>函数的形参，是属于当前函数局部作用域下的变量，外部是无法访问到的</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  	<span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(num);	<span class="comment">// 	10</span></span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line"><span class="built_in">console</span>.log(num);	<span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-js的预解析机制"><a href="#6-js的预解析机制" class="headerlink" title="6.js的预解析机制"></a>6.js的预解析机制</h3><ul>
+<li>预解析是什么：一个js引擎去解析的时候，他会把函数声明和变量进行提升，==函数声明提升到最前面，高于变量==</li>
+<li>预解析总结：<ul>
+<li>在声明函数的时候，一定要注意不要使用同一个函数名字，否则后一个函数会把前面的函数干掉重新赋值</li>
+<li>在使用变量的时候，因为预解析会把变量进行提升，但是，赋值并不会提升</li>
+<li>预解析就是一个需要注意的“大坑”，后期开发过程中，学会主动的去规避这个问题就好了</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fn();</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line"><span class="keyword">var</span> fn = <span class="number">20</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果：2,2,**fn is not a function**</span></span><br><span class="line"><span class="comment">/* 分析：1.两个函数名字一样，后面的函数把前面的函数重新赋值了，最后调用函数的结果就是两次2</span></span><br><span class="line"><span class="comment">		2.var fn = 20；已经把fn函数，给重新复制成了一个number类型，最后调用函数就会报出fn is not a function，同时，后续代码将不再解析执行</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-函数的this指向"><a href="#7-函数的this指向" class="headerlink" title="7.函数的this指向"></a>7.函数的this指向</h3><ul>
+<li>this因为指向不确定，只有在最后调用了才能确定this的最终指向</li>
+<li>==this出现的几个主要场景：==<ul>
+<li>在全局下声明的函数，this指向的就是全局最大的对象window</li>
+<li>在对象的方法中的this指向的就是最后的调用者</li>
+<li>在BOM中的定时器，this指向的也是全局对象window</li>
+<li>在DOM中的事件处理函数中，this指向的是当前的事件源</li>
+<li>在ES6的箭头函数中，由于箭头函数没有自己的this，它的this来自于外部对象的this</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line">fn();		<span class="comment">// 指向window</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="8-函数的arguments对象的基本定义以及使用场景"><a href="#8-函数的arguments对象的基本定义以及使用场景" class="headerlink" title="8.函数的arguments对象的基本定义以及使用场景"></a>8.函数的arguments对象的基本定义以及使用场景</h3><ul>
+<li>基本的定义：<ul>
+<li>arguments本身也是一个对象，是一个比较特殊的对象</li>
+<li>也称之为伪数组，因为没有真正数组上的方法</li>
+<li>但是它有属于自己的方法，详细可以去MDN文档了解</li>
+</ul>
+</li>
+<li>作用：<ul>
+<li>就是在函数传入实参的时候，用于接收实参传递进来的值</li>
+</ul>
+</li>
+<li>补充：<ul>
+<li>在ES6的箭头函数中，并没有这个特殊的对象</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-创建对象的3种方式"><a href="#9-创建对象的3种方式" class="headerlink" title="9.创建对象的3种方式"></a>9.创建对象的3种方式</h3><ul>
+<li>字面量方式创建对象</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">'jack'</span>,</span><br><span class="line">    age:<span class="number">18.</span></span><br><span class="line">    sayHi:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'你好，我是一个方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.sayHi();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>工厂模式创建对象</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    o.name = name;</span><br><span class="line">    o.age = age;</span><br><span class="line">    o.sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'你好，我是一个方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = person(<span class="string">'jack'</span>,<span class="number">18</span>);</span><br><span class="line">obj.sayHi();</span><br><span class="line"><span class="built_in">console</span>.log(obj.name);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>自定义构造函数创建对象</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.sayHi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">'你好，我是一个方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Person(<span class="string">'jack'</span>,<span class="number">18</span>);</span><br><span class="line">obj.sayHi();</span><br><span class="line"><span class="built_in">console</span>.log(obj.name);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>现在掌握创建对象的基本方式就好了，js高级阶段咱们还会基于自定义构造函数延伸，原型对象，以及原型对象之间的继承…还会降，面向对象，面向过程，到时候，好好听哈<del>~</del>我已经说了，2019-08-16 11:54</li>
+</ul>
+<h3 id="10-new干了几件事"><a href="#10-new干了几件事" class="headerlink" title="10.new干了几件事"></a>10.new干了几件事</h3><ul>
+<li>四件事<ul>
+<li>创建了一个新的空对象</li>
+<li>并且把this指向了新的空对象</li>
+<li>把属性和方法给到这个新的空对象上</li>
+<li>返回这个新的对象</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/16/函数及周边问题总结/" data-id="cjzdqava70000ggqubjlsf20o" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/15/移动web知识重点/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/16/函数及周边问题总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/15/移动web知识重点/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/15/JavaScript基础/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
