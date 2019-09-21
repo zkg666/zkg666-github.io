@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="en">
 
 
 
@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="John Doe">
   <meta name="keywords" content>
-  <title>Hexo</title>
+  <title>Hello</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -34,7 +34,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Hello</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -132,9 +132,20 @@
         <p class="h4 index-header"></p>
         <div class="index-excerpt">
           
-            <div class="index-text mb-1">WebApi阶段Api1231.是一个接口（别人已经写好的用来实现功能的方法和函数）2.怎样学？记方法；
-
-JS的组成部分12345678910111213一.ECMASCRIPT： 标准语法************************************************************************************************二.DOM       Document Object Model(文档对象类型)      1.文档类型的作用？      	通过JS操作网页      2.什么是文档对象类型      	JS将整个网页封装成了一个对象（Document）      3.文档树      在文档树中每一个标签都是一个对象************************************************************************************************三.BOM		Browser Object Modex（浏览器对象模型）	  BOM将整个浏览器包装成一个对象   </div>
+            <div class="index-text mb-1">WebApi阶段Api1.是一个接口（别人已经写好的用来实现功能的方法和函数）
+2.怎样学？
+记方法；JS的组成部分一.ECMASCRIPT： 标准语法
+************************************************************************************************
+二.DOM       Document Object Model(文档对象类型)
+      1.文档类型的作用？
+          通过JS操作网页
+      2.什么是文档对象类型
+          JS将整个网页封装成了一个对象（Document）
+      3.文档树
+      在文档树中每一个标签都是一个对象
+************************************************************************************************
+三.BOM        Browser Object Modex（浏览器对象模型）
+      BOM将整个浏览器包装成一</div>
           
         </div>
       </a>
@@ -190,13 +201,17 @@ function fn ( 形参 ) { };
 
 
 
-1234function fn (x,y,z)&#123;    console.log(x,y,z);&#125;fn(10,20);		// 10,20，undefined
-
+function fn (x,y,z){
+    console.log(x,y,z);
+}
+fn(10,20);        // 10,20，undefined
 4.函数的返回值以及函数的状态
 函数可以分为：
 有返回值的函数
 无返回值的函数
-</div>
+
+
+如果在函</div>
           
         </div>
       </a>
@@ -220,9 +235,33 @@ function fn ( 形参 ) { };
         <div class="index-excerpt">
           
             <div class="index-text mb-1">##渐变
-1.线性渐变12345678910111213141516background-image: linear-gradient()backgroound:linear-gradient()/*   渐变的方向：to 和方位名称或者用角度来表示  to right  to left   to top  to bottom*//* 注意点:用角度表示方位时，0度表示从下向上，90度表示从左向右 *//* 语法：*/background-image：linear-gradient(  to right,  red,  blue)
+1.线性渐变background-image: linear-gradient()
+backgroound:linear-gradient()
+/* 
+  渐变的方向：to 和方位名称或者用角度来表示
+  to right
+  to left 
+  to top
+  to bottom
+*/
+/* 注意点:用角度表示方位时，0度表示从下向上，90度表示从左向右 */
+/* 语法：*/
+background-image：linear-gradient(
+  to right,
+  red,
+  blue
+)
+2.径向渐变   /*background-image:radial-gradient()
+   确定渐变的原点位置
+   关键字 at
+   例如： at 方位名称 at center  at right top
 
-2.径向渐变123456789101112131415/*background-image:radial-gradient()确定渐变的原点位置关键字 at例如： at 方位名称 at center  at right top       at  值    at 100px 100px       *//*语法：*/   background-iamge:radial-gradient(      200px 100px at center,      &</div>
+          at  值    at 100px 100px
+          */
+   /*语法：*/
+      background-iamge:radial-gradient(
+         200px 100px at center,
+</div>
           
         </div>
       </a>
@@ -245,13 +284,21 @@ function fn ( 形参 ) { };
         <p class="h4 index-header"></p>
         <div class="index-excerpt">
           
-            <div class="index-text mb-1">JavaScript基础JS概念12345基于对象和时间驱动，运行在浏览器客户端的脚本语言1.js的运行环境：在浏览器端（内置了js引擎）2.对象：在js中任何一个具体的事物	对象有三要素：继承 封装 多态3.事件驱动：在网页中用户的任何一个动作都会对应一个事件
-
-JS组成1231.ECMASCRIPT（基础语法）2.DOM（通过JS的方式控制页面的标签）3.BOM（通过JS的方式控制浏览器中的效果）
-
-JS的位置123456789一、外联式1.新建JS文件 2.引入JS通过&lt;script src=&quot;js的路径&quot;&gt; &lt;/script&gt;注意：引入js的标签里面不能再写内容二、内嵌式&lt;script&gt;&lt;/script&gt;可以放在&lt;head&gt;区域，也可以放在&lt;body&gt;区域，建议放在&lt;body&gt;区域三、行内式(不建议)写在页面标签的内部比如：&lt;p onclick=&quot;javascript:alert(&apos;ss&apos;)&quot;&gt;点击&lt;/p&gt;
-
-变</div>
+            <div class="index-text mb-1">JavaScript基础JS概念基于对象和时间驱动，运行在浏览器客户端的脚本语言
+1.js的运行环境：在浏览器端（内置了js引擎）
+2.对象：在js中任何一个具体的事物
+    对象有三要素：继承 封装 多态
+3.事件驱动：在网页中用户的任何一个动作都会对应一个事件JS组成1.ECMASCRIPT（基础语法）
+2.DOM（通过JS的方式控制页面的标签）
+3.BOM（通过JS的方式控制浏览器中的效果）JS的位置一、外联式
+1.新建JS文件 
+2.引入JS通过&lt;script src=&quot;js的路径&quot;&gt; &lt;/script&gt;
+注意：引入js的标签里面不能再写内容
+二、内嵌式
+&lt;script&gt;&lt;/script&gt;可以放在&lt;head&gt;区域，也可以放在&lt;body&gt;区域，建议放在&lt;body&gt;区域
+三、行内式(不建议)
+写在页面标签的内部
+比如：&lt;p onclick=&quot;javascript:alert(&#39;ss&#39;)&quot;&gt;点击&lt;/p&gt;变量变量：变量就是</div>
           
         </div>
       </a>
@@ -289,7 +336,7 @@ JS的位置123456789一、外联式1.新建JS文件 2.引入JS通过&lt;script s
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -298,7 +345,7 @@ JS的位置123456789一、外联式1.新建JS文件 2.引入JS通过&lt;script s
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+                 for="local-search-input">keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="en">
 
 
 
@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="John Doe">
   <meta name="keywords" content>
-  <title>Hexo</title>
+  <title>Hello</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -34,7 +34,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Hello</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -102,7 +102,7 @@
 
             
               <br>
-              <p>星期日, 八月 18日 2019, 7:51 晚上</p>
+              <p>Sunday, August 18th 2019, 7:51 pm</p>
             
           </div>
 
@@ -123,59 +123,469 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto">
           <div class="markdown-body">
-            <h1 id="WebApi阶段"><a href="#WebApi阶段" class="headerlink" title="WebApi阶段"></a>WebApi阶段</h1><h2 id="Api"><a href="#Api" class="headerlink" title="Api"></a>Api</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.是一个接口（别人已经写好的用来实现功能的方法和函数）</span><br><span class="line">2.怎样学？</span><br><span class="line">记方法；</span><br></pre></td></tr></table></figure>
+            <h1 id="WebApi阶段"><a href="#WebApi阶段" class="headerlink" title="WebApi阶段"></a>WebApi阶段</h1><h2 id="Api"><a href="#Api" class="headerlink" title="Api"></a>Api</h2><pre><code>1.是一个接口（别人已经写好的用来实现功能的方法和函数）
+2.怎样学？
+记方法；</code></pre><h2 id="JS的组成部分"><a href="#JS的组成部分" class="headerlink" title="JS的组成部分"></a>JS的组成部分</h2><pre><code>一.ECMASCRIPT： 标准语法
+************************************************************************************************
+二.DOM       Document Object Model(文档对象类型)
+      1.文档类型的作用？
+          通过JS操作网页
+      2.什么是文档对象类型
+          JS将整个网页封装成了一个对象（Document）
+      3.文档树
+      在文档树中每一个标签都是一个对象
+************************************************************************************************
+三.BOM        Browser Object Modex（浏览器对象模型）
+      BOM将整个浏览器包装成一个对象   window
+      window对象里包括了文档对象（Document）</code></pre><h2 id="JS获取页内元素"><a href="#JS获取页内元素" class="headerlink" title="JS获取页内元素"></a>JS获取页内元素</h2><pre><code>1.document.getElementsByTagName(&#39;标签名&#39;);
+获取的是多个标签（元素）, 通过该方法返回的是一个伪数组，该返回中放的就是获取到的标签对象
+想要获得其中的每个值，需要进行遍历
+************************************************************************************************
+2.document.getElementById(&#39;id名&#39;);
+获得的是一个值，返回的是一个值，一个结果
+************************************************************************************************
+3.document.querySelector(&#39;css选择器&#39;);
+css选择器是之前写的选择器，返回的是满足条件的第一个结果
+************************************************************************************************
+4.document.querySelectorAll(&#39;css选择器&#39;);
+css选择器是之前写的选择器，返回的是一个伪数组，想要获得其中的每个值，需要进行遍历
+注意：
+获取的页内元素需要定义一个变量去接受；</code></pre><h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><pre><code>1.事件： 就是用的一个具体动作
+事件由3部分组成：
+事件源：要给哪个标签注册（绑定）事件，就是事件源
+事件类型：值得就是不同的动作，单击onclick 双击ondblclick
+处理函数：就是一个实现功能的匿名函数
+注意：在事件中的this指向的就是事件源对象
+*****************************************************************************************</code></pre><h2 id="操作元素属性"><a href="#操作元素属性" class="headerlink" title="操作元素属性"></a>操作元素属性</h2><pre><code>1.console.dir(对象名);可以得到对象的所有属性
+************************************************************************************************
+2.一般：获取数据的值就是：对象名.属性名
+        赋值就是：对象名.属性名=值;
+************************************************************************************************
+3.innerText和innerHTML
+获取：
+      通过对象.innerText获取标签中的内容
+      通过对象.innerHTML获取标签中的内容
+      区别：
+      innerText：
+      只能获取文本信息
+      innerHTML
+      *可以获取文本信息
+      *可以获取标签
+      *还可以获取特殊符号（回车换行等）
+赋值：
+通过对象.innerText=值;如果设置html标签将以文本的形式展示
+通过对象.innerHTML=值;可以设置html标签
+************************************************************************************************
+4.src属性
+获取对象src
+对象名.src;
+赋值
+对象名.src = 值;
+5.className用js的方式给标签设置类名
+步骤：首先要写好类样式
+     然后对象名.className=&#39;类名&#39;;
+可以添加多个类名
+对象名.className=&#39;类名1 类名2&#39;;</code></pre><h2 id="阻止a标签跳转"><a href="#阻止a标签跳转" class="headerlink" title="阻止a标签跳转"></a>阻止a标签跳转</h2><pre><code>在事件中设置：return flase;</code></pre><h2 id="样式操作"><a href="#样式操作" class="headerlink" title="样式操作"></a>样式操作</h2><pre><code>1.通过className的方式
+对象名.className=&#39;类名 类名&#39;;     进行添加类名
+对象名.className=&#39;&#39;;进行移除类名
+2.通过style的方式
+对象名.style.属性=&#39;值&#39;;  
+如果需要添加的样式少可以用这种方法，样式多的用添加类名的方式好
+3.通过classList的方式
+    对象名.classList.add(&#39;类名&#39;);   添加类名
+    如果要添加多个类名中间以逗号间隔        对象名.classList.add(&#39;类名&#39;,&#39;类名&#39;);
 
-<h2 id="JS的组成部分"><a href="#JS的组成部分" class="headerlink" title="JS的组成部分"></a>JS的组成部分</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">一.ECMASCRIPT： 标准语法</span><br><span class="line">************************************************************************************************</span><br><span class="line">二.DOM       Document Object Model(文档对象类型)</span><br><span class="line">      1.文档类型的作用？</span><br><span class="line">      	通过JS操作网页</span><br><span class="line">      2.什么是文档对象类型</span><br><span class="line">      	JS将整个网页封装成了一个对象（Document）</span><br><span class="line">      3.文档树</span><br><span class="line">      在文档树中每一个标签都是一个对象</span><br><span class="line">************************************************************************************************</span><br><span class="line">三.BOM		Browser Object Modex（浏览器对象模型）</span><br><span class="line">	  BOM将整个浏览器包装成一个对象   window</span><br><span class="line">	  window对象里包括了文档对象（Document）</span><br></pre></td></tr></table></figure>
+    对象名.classList.remove(&#39;类名&#39;);   移除类名
+    如果要移除多个类名中间以逗号间隔        对象名.classList.remove(&#39;类名&#39;,&#39;类名&#39;);
 
-<h2 id="JS获取页内元素"><a href="#JS获取页内元素" class="headerlink" title="JS获取页内元素"></a>JS获取页内元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1.document.getElementsByTagName(&apos;标签名&apos;);</span><br><span class="line">获取的是多个标签（元素）, 通过该方法返回的是一个伪数组，该返回中放的就是获取到的标签对象</span><br><span class="line">想要获得其中的每个值，需要进行遍历</span><br><span class="line">************************************************************************************************</span><br><span class="line">2.document.getElementById(&apos;id名&apos;);</span><br><span class="line">获得的是一个值，返回的是一个值，一个结果</span><br><span class="line">************************************************************************************************</span><br><span class="line">3.document.querySelector(&apos;css选择器&apos;);</span><br><span class="line">css选择器是之前写的选择器，返回的是满足条件的第一个结果</span><br><span class="line">************************************************************************************************</span><br><span class="line">4.document.querySelectorAll(&apos;css选择器&apos;);</span><br><span class="line">css选择器是之前写的选择器，返回的是一个伪数组，想要获得其中的每个值，需要进行遍历</span><br><span class="line">注意：</span><br><span class="line">获取的页内元素需要定义一个变量去接受；</span><br></pre></td></tr></table></figure>
+    对象名.classList.contains(&#39;类名&#39;);   判断是否有类名
+    对象名.classList.toggle(&#39;类名&#39;);    切换类名，如果没有类名就添加，如果有就移除</code></pre><h2 id="操作表单属性"><a href="#操作表单属性" class="headerlink" title="操作表单属性"></a>操作表单属性</h2><pre><code>1.value 属性
+获取表单中的值：对象名.value;
+给表单赋值：对象名.value = &#39;值&#39;;
+2.disabled和readOnly 用法相同，一个是禁用，一个是只读
+获取当前控件是否被禁用
+对象名.disabled                  返回的是true则是被禁用，返回false是未被禁用
+设置当前控件被禁用
+对象名.disabled= true|false     true是被禁用，false是不被禁用
+3.checked 选中
+获取标签是否被选中
+对象名.checked                  返回的是true则是被选中，返回false是未被选中
+设置当前控件被禁用
+对象名.checked= true|false      true是被选中，false是不被选中
+4.selected 下拉菜单选中
+获取下拉列表是否被选中
+对象名.selected                    返回的是true则是被选中，返回false是未被选中
+设置控件是否被选中
+对象名.selected=true | false     true是被选中，false是不被选中
+备注：
+      1. 下拉列表默认是从第一项开始显示的，默认第一项是被选中的状态
+注意：
+单个属性的返回结果是布尔类型，设置时只需设置true或者是false即可
+只有控件有的属性才能设置，没有的不能设置</code></pre><h2 id="获得焦点和失去焦点"><a href="#获得焦点和失去焦点" class="headerlink" title="获得焦点和失去焦点"></a>获得焦点和失去焦点</h2><pre><code>两个事件，获得焦点和失去焦点
+1.获得焦点
+对象名.focus
+2.失去焦点
+对象名.onblur</code></pre><h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><pre><code>onmouseenter和onmouseleave    鼠标进入和离开事件（推荐用这个）
+onmouseover和onmouseout        鼠标在元素之上和鼠标移除
+onmousemove ：                 鼠标移动时候的一个事件，鼠标移动事件
+onmousedown和onmouseup         鼠标按下和鼠标抬起事件</code></pre><h2 id="隐藏和显示"><a href="#隐藏和显示" class="headerlink" title="隐藏和显示"></a>隐藏和显示</h2><pre><code>对象名.style.display=&#39;none&#39;;隐藏
+对象名.style.display=&#39;block&#39;;显示</code></pre><h2 id="操纵标签属性样式"><a href="#操纵标签属性样式" class="headerlink" title="操纵标签属性样式"></a>操纵标签属性样式</h2><pre><code>1.操纵系统属性
+获取属性
+dom.getAttribute(&#39;属性&#39;);
+设置属性
+dom.setAttribute(&#39;属性名&#39;,&#39;值&#39;);
+移除属性
+dom.removeAttribute(&#39;属性名&#39;)
+这几种方法既可以操纵系统属性，还可以操纵自定义的属性
 
-<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.事件： 就是用的一个具体动作</span><br><span class="line">事件由3部分组成：</span><br><span class="line">事件源：要给哪个标签注册（绑定）事件，就是事件源</span><br><span class="line">事件类型：值得就是不同的动作，单击onclick 双击ondblclick</span><br><span class="line">处理函数：就是一个实现功能的匿名函数</span><br><span class="line">注意：在事件中的this指向的就是事件源对象</span><br><span class="line">*****************************************************************************************</span><br></pre></td></tr></table></figure>
+2.操纵自定义属性
 
-<h2 id="操作元素属性"><a href="#操作元素属性" class="headerlink" title="操作元素属性"></a>操作元素属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">1.console.dir(对象名);可以得到对象的所有属性</span><br><span class="line">************************************************************************************************</span><br><span class="line">2.一般：获取数据的值就是：对象名.属性名</span><br><span class="line">	    赋值就是：对象名.属性名=值;</span><br><span class="line">************************************************************************************************</span><br><span class="line">3.innerText和innerHTML</span><br><span class="line">获取：</span><br><span class="line">      通过对象.innerText获取标签中的内容</span><br><span class="line">      通过对象.innerHTML获取标签中的内容</span><br><span class="line">      区别：</span><br><span class="line">      innerText：</span><br><span class="line">      只能获取文本信息</span><br><span class="line">      innerHTML</span><br><span class="line">      *可以获取文本信息</span><br><span class="line">      *可以获取标签</span><br><span class="line">      *还可以获取特殊符号（回车换行等）</span><br><span class="line">赋值：</span><br><span class="line">通过对象.innerText=值;如果设置html标签将以文本的形式展示</span><br><span class="line">通过对象.innerHTML=值;可以设置html标签</span><br><span class="line">************************************************************************************************</span><br><span class="line">4.src属性</span><br><span class="line">获取对象src</span><br><span class="line">对象名.src;</span><br><span class="line">赋值</span><br><span class="line">对象名.src = 值;</span><br><span class="line">5.className用js的方式给标签设置类名</span><br><span class="line">步骤：首先要写好类样式</span><br><span class="line">	 然后对象名.className=&apos;类名&apos;;</span><br><span class="line">可以添加多个类名</span><br><span class="line">对象名.className=&apos;类名1 类名2&apos;;</span><br></pre></td></tr></table></figure>
+自定义属性：自己定义的属性，在标签中以date-开头
+获取属性
+    1.通过dom.getAttribute(&#39;属性&#39;)
+    2.通过H5带的方法
+    dom.dateset.(&#39;属性&#39;);     是date-后面的内容
+    只能获取自定义属性的值，返回的是一个伪数组
+设置属性
+    1.通过dom.setAttribute(&#39;属性名&#39;,&#39;值&#39;)的方式
+    2.dom.dateset;
+    var a = div.dateset;
+    a.czbk = &#39;chuanzhi&#39;;</code></pre><h2 id="通过节点控制页面元素"><a href="#通过节点控制页面元素" class="headerlink" title="通过节点控制页面元素"></a>通过节点控制页面元素</h2><pre><code>1.节点：所有的标签，属性，文本，回车符，换行符等
 
-<h2 id="阻止a标签跳转"><a href="#阻止a标签跳转" class="headerlink" title="阻止a标签跳转"></a>阻止a标签跳转</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在事件中设置：return flase;</span><br></pre></td></tr></table></figure>
+2.元素：页面中的标签
 
-<h2 id="样式操作"><a href="#样式操作" class="headerlink" title="样式操作"></a>样式操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1.通过className的方式</span><br><span class="line">对象名.className=&apos;类名 类名&apos;; 	进行添加类名</span><br><span class="line">对象名.className=&apos;&apos;;进行移除类名</span><br><span class="line">2.通过style的方式</span><br><span class="line">对象名.style.属性=&apos;值&apos;;  </span><br><span class="line">如果需要添加的样式少可以用这种方法，样式多的用添加类名的方式好</span><br><span class="line">3.通过classList的方式</span><br><span class="line">	对象名.classList.add(&apos;类名&apos;);   添加类名</span><br><span class="line">	如果要添加多个类名中间以逗号间隔		对象名.classList.add(&apos;类名&apos;,&apos;类名&apos;);</span><br><span class="line">	</span><br><span class="line">	对象名.classList.remove(&apos;类名&apos;);   移除类名</span><br><span class="line">	如果要移除多个类名中间以逗号间隔		对象名.classList.remove(&apos;类名&apos;,&apos;类名&apos;);</span><br><span class="line">	</span><br><span class="line">	对象名.classList.contains(&apos;类名&apos;);   判断是否有类名</span><br><span class="line">	对象名.classList.toggle(&apos;类名&apos;);    切换类名，如果没有类名就添加，如果有就移除</span><br></pre></td></tr></table></figure>
+3.判断父元素是否存在子元素或者是子节点
 
-<h2 id="操作表单属性"><a href="#操作表单属性" class="headerlink" title="操作表单属性"></a>操作表单属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1.value 属性</span><br><span class="line">获取表单中的值：对象名.value;</span><br><span class="line">给表单赋值：对象名.value = &apos;值&apos;;</span><br><span class="line">2.disabled和readOnly 用法相同，一个是禁用，一个是只读</span><br><span class="line">获取当前控件是否被禁用</span><br><span class="line">对象名.disabled     		     返回的是true则是被禁用，返回false是未被禁用</span><br><span class="line">设置当前控件被禁用</span><br><span class="line">对象名.disabled= true|false     true是被禁用，false是不被禁用</span><br><span class="line">3.checked 选中</span><br><span class="line">获取标签是否被选中</span><br><span class="line">对象名.checked     		     返回的是true则是被选中，返回false是未被选中</span><br><span class="line">设置当前控件被禁用</span><br><span class="line">对象名.checked= true|false      true是被选中，false是不被选中</span><br><span class="line">4.selected 下拉菜单选中</span><br><span class="line">获取下拉列表是否被选中</span><br><span class="line">对象名.selected   				 返回的是true则是被选中，返回false是未被选中</span><br><span class="line">设置控件是否被选中</span><br><span class="line">对象名.selected=true | false	 true是被选中，false是不被选中</span><br><span class="line">备注：</span><br><span class="line">  	1. 下拉列表默认是从第一项开始显示的，默认第一项是被选中的状态</span><br><span class="line">注意：</span><br><span class="line">单个属性的返回结果是布尔类型，设置时只需设置true或者是false即可</span><br><span class="line">只有控件有的属性才能设置，没有的不能设置</span><br></pre></td></tr></table></figure>
+dom.hasChildNodes()
+返回一个布尔类型，true代表存在，flase代表不存在
 
-<h2 id="获得焦点和失去焦点"><a href="#获得焦点和失去焦点" class="headerlink" title="获得焦点和失去焦点"></a>获得焦点和失去焦点</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">两个事件，获得焦点和失去焦点</span><br><span class="line">1.获得焦点</span><br><span class="line">对象名.focus</span><br><span class="line">2.失去焦点</span><br><span class="line">对象名.onblur</span><br></pre></td></tr></table></figure>
+4.获取父元素中的子元素
 
-<h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">onmouseenter和onmouseleave	鼠标进入和离开事件（推荐用这个）</span><br><span class="line">onmouseover和onmouseout		鼠标在元素之上和鼠标移除</span><br><span class="line">onmousemove ： 				鼠标移动时候的一个事件，鼠标移动事件</span><br><span class="line">onmousedown和onmouseup 		鼠标按下和鼠标抬起事件</span><br></pre></td></tr></table></figure>
+dom.children
+返回的是一个伪数组，可以根据length属性判断是否存在子元素，可以根据循环遍历得到里面的值
 
-<h2 id="隐藏和显示"><a href="#隐藏和显示" class="headerlink" title="隐藏和显示"></a>隐藏和显示</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对象名.style.display=&apos;none&apos;;隐藏</span><br><span class="line">对象名.style.display=&apos;block&apos;;显示</span><br></pre></td></tr></table></figure>
+5.根据父元素获取子元素或子节点
 
-<h2 id="操纵标签属性样式"><a href="#操纵标签属性样式" class="headerlink" title="操纵标签属性样式"></a>操纵标签属性样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">1.操纵系统属性</span><br><span class="line">获取属性</span><br><span class="line">dom.getAttribute(&apos;属性&apos;);</span><br><span class="line">设置属性</span><br><span class="line">dom.setAttribute(&apos;属性名&apos;,&apos;值&apos;);</span><br><span class="line">移除属性</span><br><span class="line">dom.removeAttribute(&apos;属性名&apos;)</span><br><span class="line">这几种方法既可以操纵系统属性，还可以操纵自定义的属性</span><br><span class="line"></span><br><span class="line">2.操纵自定义属性</span><br><span class="line"></span><br><span class="line">自定义属性：自己定义的属性，在标签中以date-开头</span><br><span class="line">获取属性</span><br><span class="line">	1.通过dom.getAttribute(&apos;属性&apos;)</span><br><span class="line">	2.通过H5带的方法</span><br><span class="line">	dom.dateset.(&apos;属性&apos;);     是date-后面的内容</span><br><span class="line">	只能获取自定义属性的值，返回的是一个伪数组</span><br><span class="line">设置属性</span><br><span class="line">	1.通过dom.setAttribute(&apos;属性名&apos;,&apos;值&apos;)的方式</span><br><span class="line">	2.dom.dateset;</span><br><span class="line">	var a = div.dateset;</span><br><span class="line">	a.czbk = &apos;chuanzhi&apos;;</span><br></pre></td></tr></table></figure>
+    获取所有子元素: dom.children
 
-<h2 id="通过节点控制页面元素"><a href="#通过节点控制页面元素" class="headerlink" title="通过节点控制页面元素"></a>通过节点控制页面元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">1.节点：所有的标签，属性，文本，回车符，换行符等</span><br><span class="line"></span><br><span class="line">2.元素：页面中的标签</span><br><span class="line"></span><br><span class="line">3.判断父元素是否存在子元素或者是子节点</span><br><span class="line"></span><br><span class="line">dom.hasChildNodes()</span><br><span class="line">返回一个布尔类型，true代表存在，flase代表不存在</span><br><span class="line"></span><br><span class="line">4.获取父元素中的子元素</span><br><span class="line"></span><br><span class="line">dom.children</span><br><span class="line">返回的是一个伪数组，可以根据length属性判断是否存在子元素，可以根据循环遍历得到里面的值</span><br><span class="line"></span><br><span class="line">5.根据父元素获取子元素或子节点</span><br><span class="line"></span><br><span class="line">	获取所有子元素: dom.children</span><br><span class="line">	</span><br><span class="line">	获取第一个子元素：dom.firstElementChild</span><br><span class="line">	</span><br><span class="line">	获取第二个子元素：dom.lastElementChild</span><br><span class="line">	</span><br><span class="line">	其他：</span><br><span class="line">         获取父元素中的子节点：       dom.childNodes</span><br><span class="line"></span><br><span class="line">         获取父元素中第一个子节点:    dom.firstChild</span><br><span class="line"></span><br><span class="line">         获取父元素中最后一个子节点：  dom.lastChild</span><br><span class="line">         </span><br><span class="line">6.根据子节点获取父节点</span><br><span class="line"></span><br><span class="line">dom.parentNode    ---&gt; 获取当前标签的父节点,返回的是一个节点对象</span><br><span class="line"></span><br><span class="line">7.获取兄弟节点</span><br><span class="line"></span><br><span class="line">  获取当前元素上一个兄弟元素(标签)： dom.previousElementSibling</span><br><span class="line"></span><br><span class="line">  获取当前元素的下一个兄弟元素（标签）: dom.nextElementSibling</span><br><span class="line"></span><br><span class="line">  获取兄弟节点:</span><br><span class="line">       dom.nextSibling      下一个兄弟节点</span><br><span class="line">       dom.previousSibling  上一个兄弟节点</span><br><span class="line">       </span><br><span class="line">8.节点类型和节点名称</span><br><span class="line"></span><br><span class="line">     获取节点的类型</span><br><span class="line">            </span><br><span class="line">     dom.nodeType  ---&gt; 1 代表元素     3  代表节点   2 代表属性 </span><br><span class="line"></span><br><span class="line">     获取节点的名字</span><br><span class="line"></span><br><span class="line">     dom.nodeName  ---&gt; 获取当前节点的名字</span><br><span class="line"></span><br><span class="line">     如果节点是一个文本（回车），那么通过dom.nodeName --- 得到的结果是 #text</span><br></pre></td></tr></table></figure>
+    获取第一个子元素：dom.firstElementChild
 
-<h2 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.document.write();</span><br><span class="line">2.dom.innerHTML=&apos;&apos;;</span><br><span class="line">3.dom.createElement(&apos;标签名&apos;);</span><br><span class="line">	删除操作：1.将此标签进行隐藏 this.parentNode.parentNode.style.display=&apos;none&apos;;</span><br><span class="line">			 2.父元素.removeChild(node);</span><br><span class="line">通过第三种创建的方式返回的是一个对象，要定义一个变量去接收</span><br><span class="line">步骤：</span><br><span class="line">  ✔   通过 document.createElement(&apos;标签名称&apos;)创建一个标签,返回的就是一个节点对象</span><br><span class="line"></span><br><span class="line">  ✔   通过一个变量来接收创建好的标签（对象）</span><br><span class="line"></span><br><span class="line">  ✔   需要将创建好的标签添加到对应的文档树中（一个具体的节点中） 通过 dom.appendChild(节点);</span><br></pre></td></tr></table></figure>
+    获取第二个子元素：dom.lastElementChild
 
-<h2 id="动态创建元素的其他方式"><a href="#动态创建元素的其他方式" class="headerlink" title="动态创建元素的其他方式"></a>动态创建元素的其他方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.dom.appendChild(节点);在父元素的末尾创建一个子节点；</span><br><span class="line">2.dom.insertBefore(新节点,目标节点);在目标节点之前创建一个子节点</span><br><span class="line">	例如：dom.insertBefore(新节点，dom.firstElementChild);</span><br><span class="line">		这就是每次都在第一个位置显示元素</span><br><span class="line">3.dom.cloneNode()克隆节点，参数是一个布尔类型的值</span><br><span class="line">	 true:  将标签中的其他内容可以克隆</span><br><span class="line"></span><br><span class="line">     false: 只克隆当前标签，不会克隆标签中的其他内容。</span><br><span class="line">4.dom.replaceChild(新节点, 目标节点)替换。</span><br></pre></td></tr></table></figure>
+    其他：
+         获取父元素中的子节点：       dom.childNodes
 
-<h2 id="输入框事件"><a href="#输入框事件" class="headerlink" title="输入框事件"></a>输入框事件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入框事件： 用来检测用户输入</span><br><span class="line">dom.oninput</span><br></pre></td></tr></table></figure>
+         获取父元素中第一个子节点:    dom.firstChild
 
-<h2 id="给元素注册事件"><a href="#给元素注册事件" class="headerlink" title="给元素注册事件"></a>给元素注册事件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">tip:通过on的方式注册的同一个事件，下面的会覆盖前面的，所以想要不覆盖之前的，要用到新的方式。</span><br><span class="line"></span><br><span class="line">1.通过事件监听的方式</span><br><span class="line">事件源.addEventListener(参数1,参数2,参数3);</span><br><span class="line">参数1：事件类型，不能用on,带引号，字符串类型的</span><br><span class="line">参数2：处理函数（匿名或者是命名）function()&#123;&#125;</span><br><span class="line">注意：兼容性，ie8级以下不能用</span><br><span class="line"></span><br><span class="line">2.dom.attachEvent(参数1,参数2)</span><br><span class="line">参数1：事件类型，需要on,带引号，字符串类型的</span><br><span class="line">参数2：处理函数（匿名或者是命名）function()&#123;&#125;</span><br><span class="line">注意：这种方式是给ie低版本浏览器使用的</span><br><span class="line"></span><br><span class="line">3.兼容性，兼容ie低版本和谷歌</span><br><span class="line">&lt;!--[if IE 8]&gt;</span><br><span class="line">    &lt;script&gt; dom.attachEvent(参数1,参数2)代码&lt;/script&gt;</span><br><span class="line">&lt;![endif]--&gt;</span><br><span class="line"></span><br><span class="line">4.移除元素：</span><br><span class="line">	1.如果是通过on给元素注册事件，要移除只需赋值null</span><br><span class="line">	例如：dom.onclick=null;</span><br><span class="line">	2.如果是通过事件源.addEventListener(参数1,参数2,参数3);这种方式</span><br><span class="line">	注意：参数2的函数必须是命名函数</span><br><span class="line">	例如：</span><br><span class="line">	例如：           </span><br><span class="line">              btn.addEventListener(&apos;click&apos;, fn);</span><br><span class="line">              function fn() &#123;</span><br><span class="line">                  alert(1);</span><br><span class="line">              &#125;</span><br><span class="line">              //移除对应的该事件</span><br><span class="line">              btn.removeEventListener(&apos;click&apos;,fn);</span><br><span class="line">	3.dom.attachEvent(参数1,参数2)这种方式detachEvent();</span><br><span class="line">	注意：参数2的函数也必须是命名函数，使用方式与 removeEventListener 一样。</span><br></pre></td></tr></table></figure>
+         获取父元素中最后一个子节点：  dom.lastChild
 
-<h2 id="事件的3个阶段"><a href="#事件的3个阶段" class="headerlink" title="事件的3个阶段"></a>事件的3个阶段</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">  1. addEventListener 中第三个参数是一个布尔类型的结果</span><br><span class="line"></span><br><span class="line">    1.1 :  如果 addEventListener 第三个参数是false（默认值），那么就会出现事件冒泡的现象</span><br><span class="line"></span><br><span class="line">    1.2  ：如果 addEventListener 第三个参数是true，那么会出现事件捕获的现象</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2. 事件冒泡： 事件会从当前事件源处开始向外传递</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3. 事件捕获： 事件会从外向内传递，传递到点击当前的事件源为止</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4. 事件执行： 事件到事件源处执行完了（点击的当前真正事件源）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">     ✔ 通过 onclick的方式只能出现 事件冒泡，没有调用执行捕获阶段 （不支持第三个参数的设置）</span><br><span class="line"></span><br><span class="line">     ✔ 通过 attachEvent的方式注册事件 出现事件冒泡，没有调用执行捕获阶段（不支持第三个参数的设置）</span><br></pre></td></tr></table></figure>
+6.根据子节点获取父节点
 
-<h2 id="委托（编程思想）"><a href="#委托（编程思想）" class="headerlink" title="委托（编程思想）"></a>委托（编程思想）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">事件对象参数： </span><br><span class="line"></span><br><span class="line">         当用户在执行一个事件的事件的，该参数中会将用户执行事件的一些数据记录下来</span><br><span class="line"></span><br><span class="line">    注意：</span><br><span class="line">         1. 事件对象参数不需要我们赋值</span><br><span class="line"></span><br><span class="line">         2. 在执行事件的时候，事件对象参数中就有值了。</span><br><span class="line"></span><br><span class="line">    总结：</span><br><span class="line">         e.target  ---&gt; 获取当前真正的对象</span><br><span class="line">         e.type    ----&gt; 获取当前事件类型</span><br></pre></td></tr></table></figure>
+dom.parentNode    ---&gt; 获取当前标签的父节点,返回的是一个节点对象
 
-<h2 id="通过事件对象参数获取鼠标位置信息"><a href="#通过事件对象参数获取鼠标位置信息" class="headerlink" title="通过事件对象参数获取鼠标位置信息"></a>通过事件对象参数获取鼠标位置信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">e.clientX : 从浏览器的左上角开始计算横坐标</span><br><span class="line">   e.clientY</span><br><span class="line"></span><br><span class="line">   e.offsetX: 从当前点击元素的左上角计算横坐标</span><br><span class="line">   e.offsetY：</span><br><span class="line"></span><br><span class="line">   e.pageX: 从浏览器的左上角开始计算横坐标</span><br><span class="line">   e.pageY：</span><br><span class="line">   </span><br><span class="line">   e.screenX: 从整个电脑屏开始计算</span><br><span class="line">   e.screenY：从整个电脑屏开始计算</span><br></pre></td></tr></table></figure>
+7.获取兄弟节点
 
-<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">onkeydown : 按下键盘上任何一个键</span><br><span class="line"></span><br><span class="line">   onkeyup ： 当键盘上的键抬起的时候触发的事件</span><br><span class="line"></span><br><span class="line">   onkeypress:  无法获取键盘上的功能键</span><br><span class="line">   注意：</span><br><span class="line">        1. 获取用户按下键的名字   e.key</span><br><span class="line"></span><br><span class="line">        2. 获取键盘上每一个键对应的值:  e.keyCode</span><br></pre></td></tr></table></figure>
+  获取当前元素上一个兄弟元素(标签)： dom.previousElementSibling
 
-<h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">1.BOM 浏览器对象模型</span><br><span class="line">在浏览器中有个顶级对象window</span><br><span class="line">注意：在js的全局作用域中的所有变量，函数，在访问window这个顶级对象时可以省略不写</span><br><span class="line">2.页面加载事件</span><br><span class="line">window.onload()=function()&#123;&#125;</span><br><span class="line">当页面加载完成后(文档渲染完成，外部css加载完，外部js加载完)再执行onload里面的事件</span><br><span class="line">3.location对象</span><br><span class="line">	1.通过js进行页面跳转(重点)</span><br><span class="line">	location.href=&apos;地址&apos;;  页面跳转，在当面页面跳转</span><br><span class="line">	location.href		  获取当前页面地址</span><br><span class="line">	window.open		 	   打开页面，在新窗口中</span><br><span class="line">	2.其他方法(了解)</span><br><span class="line">	assign() 委派，和href用法相同</span><br><span class="line">	replace()替换，跳转页面，没有历史记录，无法后退</span><br><span class="line">	reload()重新加载，相当于刷新</span><br><span class="line">3.location属性介绍</span><br><span class="line">    location.host       ---&gt; 主机名(域名)</span><br><span class="line">    location.pathname   ---&gt; 文件路径</span><br><span class="line">    location.protocol   ---&gt; 协议</span><br><span class="line">    location.port       ----&gt; 端口</span><br></pre></td></tr></table></figure>
+  获取当前元素的下一个兄弟元素（标签）: dom.nextElementSibling
 
-<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1.setTimeout(参数1, 参数2):  在几毫秒之后要执行某个处理程序  （类似于延时效果）</span><br><span class="line"></span><br><span class="line">        参数1: 代表的是一个处理程序（匿名函数或者命名函数）</span><br><span class="line"></span><br><span class="line">        参数2: 代表的就是一个时间（以毫秒为单位）</span><br><span class="line"></span><br><span class="line">通过 clearTimeout(参数id) 可以将 对应的 setTimeout定时器停止掉（清掉）</span><br><span class="line"></span><br><span class="line">          参数id : 代表的就是  setTimeout开启时候的一个id值</span><br><span class="line"></span><br><span class="line">       注意：</span><br><span class="line">           代码每执行一次 setTimeout() 就会开启一个新的定时器，每一个定时器都会有一个自己的编号。</span><br><span class="line"></span><br><span class="line">2.setInterval(参数1, 参数2):  每隔一段时间就执行一次。（闹钟）</span><br><span class="line"></span><br><span class="line">           参数1：代表处理程序（要做的事情）</span><br><span class="line"></span><br><span class="line">           参数2：代表间隔的时间（以毫秒为单位）</span><br><span class="line"></span><br><span class="line">清除 setInterval定时器：  通过  clearInterval(id)</span><br><span class="line"></span><br><span class="line">       注意：</span><br><span class="line">           代码每执行一次  setInterval() 就会开启一个新的定时器,每一个定时器都会有一个自己的编号.</span><br></pre></td></tr></table></figure>
+  获取兄弟节点:
+       dom.nextSibling      下一个兄弟节点
+       dom.previousSibling  上一个兄弟节点
 
-<h2 id="获取元素的大小和位置"><a href="#获取元素的大小和位置" class="headerlink" title="获取元素的大小和位置"></a>获取元素的大小和位置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">一、offset</span><br><span class="line">	offsetLeft		元素在水平方向的偏移量</span><br><span class="line">	offsetTop 		元素在垂直方面的偏移量</span><br><span class="line">	offsetHeight	元素的实际高度</span><br><span class="line">	offsetWidth		元素的实际宽度</span><br><span class="line"></span><br><span class="line">二、client</span><br><span class="line">	clientLeft		元素的左边框的宽度</span><br><span class="line">	clientTop		元素的上边框宽度</span><br><span class="line">	clientWidth		元素的宽度，不包括边框，包括padding</span><br><span class="line">	clientHeight	元素的高度，不包括边框，包括padding</span><br><span class="line">	</span><br><span class="line">三、scroll</span><br><span class="line">	scrollLeft		</span><br><span class="line">	scrollTop		元素的滚动条滚动的距离</span><br><span class="line">	scrollWidth		</span><br><span class="line">	1. 如果内容区域小于当前元素，那么scrollWidth就代表当前元素大小【算内边距，不算边框】</span><br><span class="line">	2. 如果内容区域大于当前元素，那么scrollWidth就等于内容区域大小 + 左内边距</span><br><span class="line">	scrollHeight</span><br></pre></td></tr></table></figure>
+8.节点类型和节点名称
 
-<h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">1.移动端基础事件类型(只能通过事件监听的方式加基础)</span><br><span class="line">touchstart		手指按下</span><br><span class="line">touchend		手指离开</span><br><span class="line">touchmove		手指滑动</span><br><span class="line">e.touches		获取手指在屏幕的信息		 返回的是一个伪数组	 数组里面的内容是对象</span><br><span class="line">e.targetTouches	获取手指在元素上的信息		返回的是一个伪数组	数组里面的内容是对象</span><br><span class="line">e.changedTouches获取手指离开屏幕的信息		返回的是一个伪数组	数组里面的内容是对象</span><br><span class="line">总结：</span><br><span class="line">    1.将手机屏幕的手指信息以伪数组的形式保存</span><br><span class="line">    2.该数组中的每一个值都是以对象的形式保存的</span><br><span class="line">    3.length获得手指的个数</span><br><span class="line">    4.clientX获得手指距视口的水平距离</span><br><span class="line">    5.clientY获得手指距视口的垂直距离</span><br><span class="line">    6.pageX获得手指距视口的垂直距离，如果出现滚动条则包括滚动条的距离</span><br><span class="line">    </span><br><span class="line">2.用基础事件封装一个点击事件和滑动事件</span><br><span class="line">思路：手指按下的位置和离开的位置相同</span><br><span class="line">    滑动事件思路：  </span><br><span class="line">        1.按下时候的位置 和 离开时候的位置是否一样</span><br><span class="line"></span><br><span class="line">        2.如果是水平滑动：</span><br><span class="line">              </span><br><span class="line">              水平的距离 &gt; 垂直距离</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line">              从左向右滑动：     开始位置 &lt; 结束位置</span><br><span class="line"></span><br><span class="line">              从右向左滑动：     开始位置 &gt; 结束位置</span><br><span class="line"></span><br><span class="line">        3. 如果是垂直滑动</span><br><span class="line"></span><br><span class="line">               垂直距离 &gt; 水平距离</span><br><span class="line"></span><br><span class="line">               从上向下滑动：   开始位置 &lt; 结束位置</span><br><span class="line"></span><br><span class="line">               从下向上滑动：   开始位置 &gt; 结束位置</span><br><span class="line"></span><br><span class="line">3.在移动端的轮播图可以用插件完成</span><br><span class="line">https://www.swiper.com.cn/</span><br><span class="line">    1. 下载文件</span><br><span class="line">    2. 引用文件</span><br></pre></td></tr></table></figure>
+     获取节点的类型
 
-<h2 id="拓展H5中API"><a href="#拓展H5中API" class="headerlink" title="拓展H5中API"></a>拓展H5中API</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">1.文件读取</span><br><span class="line"></span><br><span class="line">    上传功能： 文件读取</span><br><span class="line">    步骤：  </span><br><span class="line">        1. 准备一个上传控件  (&lt;input type=&quot;file&quot;&gt;)</span><br><span class="line"></span><br><span class="line">        2. 给当前控件注册一个change事件</span><br><span class="line"></span><br><span class="line">        3. 在change事件中获取上传的资源信息</span><br><span class="line"></span><br><span class="line">        4. 用户上传的资源都在 files【伪数组，每一个资源都是以对象的形式保存】</span><br><span class="line"></span><br><span class="line">        5. 要读取文件的时候，需要创建一个读取器</span><br><span class="line"></span><br><span class="line">            例如： var reader = new FileReader();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            事件： onload （当资源完全读取完成后就会触发的一个事件）</span><br><span class="line"></span><br><span class="line">            属性： result （获取最后的读取结果）</span><br><span class="line"></span><br><span class="line">            方法： readAsText()  :    以文本的形式读取文件（获取文件中的文字信息）</span><br><span class="line"></span><br><span class="line">                  readAsDataURL() :   将文件的路径读取处理</span><br><span class="line"></span><br><span class="line">        6. 注意： 不能直接获取读取结果，当前资源被读取完成后才能获取读取结果  </span><br><span class="line">2.本地存储</span><br><span class="line"></span><br><span class="line">☞ sessionStorage</span><br><span class="line">        </span><br><span class="line">         保存数据</span><br><span class="line">         sessionStorage.setItem(键, 值);</span><br><span class="line"></span><br><span class="line">         获取数据</span><br><span class="line">         sessionStorage.getItem(键);</span><br><span class="line"></span><br><span class="line">         删除数据</span><br><span class="line">         sessionStorage.removeItem(键);</span><br><span class="line"></span><br><span class="line">         清空所有的数据</span><br><span class="line">         sessionStorage.clear();</span><br><span class="line">         总结：</span><br><span class="line">             1. 保存的数据是临时数据（页面关闭后，所有的数据都被自动清空）</span><br><span class="line">             2. sessionStorage保存的值只能在当前页面中访问</span><br><span class="line">             3. 保存数据的大小大约在 5M</span><br><span class="line"></span><br><span class="line">    ☞ localStorage</span><br><span class="line">        localStorage.setItem(键, 值);</span><br><span class="line">        localStorage.getItem(键);</span><br><span class="line">        localStorage.removeItem(键);</span><br><span class="line">        localStorage.clear();</span><br><span class="line">         总结：</span><br><span class="line">             1. 保存的数据是持久化的数据（页面关闭后，数据依然存在）；</span><br><span class="line">             2. localStorage 保存的数据可以在其他页面中访问</span><br><span class="line">             3. localStorage保存数据的大小大约在 20M</span><br><span class="line">3.多媒体API</span><br><span class="line">	☞方法： </span><br><span class="line">         play() 播放</span><br><span class="line"></span><br><span class="line">         pause() 暂停</span><br><span class="line"></span><br><span class="line">    ☞ 属性：</span><br><span class="line">         paused         是否暂停  （true| 暂停， flase | 正在播放）</span><br><span class="line"></span><br><span class="line">         currentTime    获取当前播放时间（单位是秒）  将秒转化为 时，分 ，秒</span><br><span class="line"></span><br><span class="line">             400秒 ===》   400 / 60 / 60</span><br><span class="line"></span><br><span class="line">                          400 / 60 % 60</span><br><span class="line"></span><br><span class="line">                          400 % 60</span><br><span class="line">                          </span><br><span class="line">         duration    获取当前多媒体的总时长（单位是秒）</span><br><span class="line">    ☞ 事件：</span><br><span class="line">         timeupdate    检测到当前视频正在播放</span><br><span class="line">    ☞ 跳播功能： 本质就是在设置当前播放时间</span><br><span class="line">         公式：</span><br><span class="line"></span><br><span class="line">         点击位置的宽度 ： 整个进度条的宽度 = 当前播放时间： 总时长</span><br><span class="line"></span><br><span class="line">         当前播放时间 =  点击位置的宽度 *  总时长 / 整个进度条的宽度</span><br><span class="line"></span><br><span class="line">         注意：</span><br><span class="line">            当前鼠标点击的位置 就是进度条的宽度</span><br></pre></td></tr></table></figure>
+     dom.nodeType  ---&gt; 1 代表元素     3  代表节点   2 代表属性 
+
+     获取节点的名字
+
+     dom.nodeName  ---&gt; 获取当前节点的名字
+
+     如果节点是一个文本（回车），那么通过dom.nodeName --- 得到的结果是 #text</code></pre><h2 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h2><pre><code>1.document.write();
+2.dom.innerHTML=&#39;&#39;;
+3.dom.createElement(&#39;标签名&#39;);
+    删除操作：1.将此标签进行隐藏 this.parentNode.parentNode.style.display=&#39;none&#39;;
+             2.父元素.removeChild(node);
+通过第三种创建的方式返回的是一个对象，要定义一个变量去接收
+步骤：
+  ✔   通过 document.createElement(&#39;标签名称&#39;)创建一个标签,返回的就是一个节点对象
+
+  ✔   通过一个变量来接收创建好的标签（对象）
+
+  ✔   需要将创建好的标签添加到对应的文档树中（一个具体的节点中） 通过 dom.appendChild(节点);</code></pre><h2 id="动态创建元素的其他方式"><a href="#动态创建元素的其他方式" class="headerlink" title="动态创建元素的其他方式"></a>动态创建元素的其他方式</h2><pre><code>1.dom.appendChild(节点);在父元素的末尾创建一个子节点；
+2.dom.insertBefore(新节点,目标节点);在目标节点之前创建一个子节点
+    例如：dom.insertBefore(新节点，dom.firstElementChild);
+        这就是每次都在第一个位置显示元素
+3.dom.cloneNode()克隆节点，参数是一个布尔类型的值
+     true:  将标签中的其他内容可以克隆
+
+     false: 只克隆当前标签，不会克隆标签中的其他内容。
+4.dom.replaceChild(新节点, 目标节点)替换。</code></pre><h2 id="输入框事件"><a href="#输入框事件" class="headerlink" title="输入框事件"></a>输入框事件</h2><pre><code>输入框事件： 用来检测用户输入
+dom.oninput</code></pre><h2 id="给元素注册事件"><a href="#给元素注册事件" class="headerlink" title="给元素注册事件"></a>给元素注册事件</h2><pre><code>tip:通过on的方式注册的同一个事件，下面的会覆盖前面的，所以想要不覆盖之前的，要用到新的方式。
+
+1.通过事件监听的方式
+事件源.addEventListener(参数1,参数2,参数3);
+参数1：事件类型，不能用on,带引号，字符串类型的
+参数2：处理函数（匿名或者是命名）function(){}
+注意：兼容性，ie8级以下不能用
+
+2.dom.attachEvent(参数1,参数2)
+参数1：事件类型，需要on,带引号，字符串类型的
+参数2：处理函数（匿名或者是命名）function(){}
+注意：这种方式是给ie低版本浏览器使用的
+
+3.兼容性，兼容ie低版本和谷歌
+&lt;!--[if IE 8]&gt;
+    &lt;script&gt; dom.attachEvent(参数1,参数2)代码&lt;/script&gt;
+&lt;![endif]--&gt;
+
+4.移除元素：
+    1.如果是通过on给元素注册事件，要移除只需赋值null
+    例如：dom.onclick=null;
+    2.如果是通过事件源.addEventListener(参数1,参数2,参数3);这种方式
+    注意：参数2的函数必须是命名函数
+    例如：
+    例如：           
+              btn.addEventListener(&#39;click&#39;, fn);
+              function fn() {
+                  alert(1);
+              }
+              //移除对应的该事件
+              btn.removeEventListener(&#39;click&#39;,fn);
+    3.dom.attachEvent(参数1,参数2)这种方式detachEvent();
+    注意：参数2的函数也必须是命名函数，使用方式与 removeEventListener 一样。</code></pre><h2 id="事件的3个阶段"><a href="#事件的3个阶段" class="headerlink" title="事件的3个阶段"></a>事件的3个阶段</h2><pre><code>      1. addEventListener 中第三个参数是一个布尔类型的结果
+
+        1.1 :  如果 addEventListener 第三个参数是false（默认值），那么就会出现事件冒泡的现象
+
+        1.2  ：如果 addEventListener 第三个参数是true，那么会出现事件捕获的现象
 
 
+    2. 事件冒泡： 事件会从当前事件源处开始向外传递
+
+
+    3. 事件捕获： 事件会从外向内传递，传递到点击当前的事件源为止
+
+
+    4. 事件执行： 事件到事件源处执行完了（点击的当前真正事件源）
+
+
+    注意：
+         ✔ 通过 onclick的方式只能出现 事件冒泡，没有调用执行捕获阶段 （不支持第三个参数的设置）
+
+         ✔ 通过 attachEvent的方式注册事件 出现事件冒泡，没有调用执行捕获阶段（不支持第三个参数的设置）   </code></pre><h2 id="委托（编程思想）"><a href="#委托（编程思想）" class="headerlink" title="委托（编程思想）"></a>委托（编程思想）</h2><pre><code>事件对象参数： 
+
+         当用户在执行一个事件的事件的，该参数中会将用户执行事件的一些数据记录下来
+
+    注意：
+         1. 事件对象参数不需要我们赋值
+
+         2. 在执行事件的时候，事件对象参数中就有值了。
+
+    总结：
+         e.target  ---&gt; 获取当前真正的对象
+         e.type    ----&gt; 获取当前事件类型</code></pre><h2 id="通过事件对象参数获取鼠标位置信息"><a href="#通过事件对象参数获取鼠标位置信息" class="headerlink" title="通过事件对象参数获取鼠标位置信息"></a>通过事件对象参数获取鼠标位置信息</h2><pre><code>     e.clientX : 从浏览器的左上角开始计算横坐标
+     e.clientY
+
+     e.offsetX: 从当前点击元素的左上角计算横坐标
+     e.offsetY：
+
+     e.pageX: 从浏览器的左上角开始计算横坐标
+     e.pageY：
+
+     e.screenX: 从整个电脑屏开始计算
+     e.screenY：从整个电脑屏开始计算</code></pre><h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2><pre><code>    onkeydown : 按下键盘上任何一个键
+
+    onkeyup ： 当键盘上的键抬起的时候触发的事件
+
+    onkeypress:  无法获取键盘上的功能键
+    注意：
+         1. 获取用户按下键的名字   e.key
+
+         2. 获取键盘上每一个键对应的值:  e.keyCode</code></pre><h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><pre><code>1.BOM 浏览器对象模型
+在浏览器中有个顶级对象window
+注意：在js的全局作用域中的所有变量，函数，在访问window这个顶级对象时可以省略不写
+2.页面加载事件
+window.onload()=function(){}
+当页面加载完成后(文档渲染完成，外部css加载完，外部js加载完)再执行onload里面的事件
+3.location对象
+    1.通过js进行页面跳转(重点)
+    location.href=&#39;地址&#39;;  页面跳转，在当面页面跳转
+    location.href          获取当前页面地址
+    window.open                打开页面，在新窗口中
+    2.其他方法(了解)
+    assign() 委派，和href用法相同
+    replace()替换，跳转页面，没有历史记录，无法后退
+    reload()重新加载，相当于刷新
+3.location属性介绍
+    location.host       ---&gt; 主机名(域名)
+    location.pathname   ---&gt; 文件路径
+    location.protocol   ---&gt; 协议
+    location.port       ----&gt; 端口</code></pre><h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><pre><code>1.setTimeout(参数1, 参数2):  在几毫秒之后要执行某个处理程序  （类似于延时效果）
+
+        参数1: 代表的是一个处理程序（匿名函数或者命名函数）
+
+        参数2: 代表的就是一个时间（以毫秒为单位）
+
+通过 clearTimeout(参数id) 可以将 对应的 setTimeout定时器停止掉（清掉）
+
+          参数id : 代表的就是  setTimeout开启时候的一个id值
+
+       注意：
+           代码每执行一次 setTimeout() 就会开启一个新的定时器，每一个定时器都会有一个自己的编号。
+
+2.setInterval(参数1, 参数2):  每隔一段时间就执行一次。（闹钟）
+
+           参数1：代表处理程序（要做的事情）
+
+           参数2：代表间隔的时间（以毫秒为单位）
+
+清除 setInterval定时器：  通过  clearInterval(id)
+
+       注意：
+           代码每执行一次  setInterval() 就会开启一个新的定时器,每一个定时器都会有一个自己的编号.</code></pre><h2 id="获取元素的大小和位置"><a href="#获取元素的大小和位置" class="headerlink" title="获取元素的大小和位置"></a>获取元素的大小和位置</h2><pre><code>一、offset
+    offsetLeft        元素在水平方向的偏移量
+    offsetTop         元素在垂直方面的偏移量
+    offsetHeight    元素的实际高度
+    offsetWidth        元素的实际宽度
+
+二、client
+    clientLeft        元素的左边框的宽度
+    clientTop        元素的上边框宽度
+    clientWidth        元素的宽度，不包括边框，包括padding
+    clientHeight    元素的高度，不包括边框，包括padding
+
+三、scroll
+    scrollLeft        
+    scrollTop        元素的滚动条滚动的距离
+    scrollWidth        
+    1. 如果内容区域小于当前元素，那么scrollWidth就代表当前元素大小【算内边距，不算边框】
+    2. 如果内容区域大于当前元素，那么scrollWidth就等于内容区域大小 + 左内边距
+    scrollHeight    </code></pre><h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><pre><code>1.移动端基础事件类型(只能通过事件监听的方式加基础)
+touchstart        手指按下
+touchend        手指离开
+touchmove        手指滑动
+e.touches        获取手指在屏幕的信息         返回的是一个伪数组     数组里面的内容是对象
+e.targetTouches    获取手指在元素上的信息        返回的是一个伪数组    数组里面的内容是对象
+e.changedTouches获取手指离开屏幕的信息        返回的是一个伪数组    数组里面的内容是对象
+总结：
+    1.将手机屏幕的手指信息以伪数组的形式保存
+    2.该数组中的每一个值都是以对象的形式保存的
+    3.length获得手指的个数
+    4.clientX获得手指距视口的水平距离
+    5.clientY获得手指距视口的垂直距离
+    6.pageX获得手指距视口的垂直距离，如果出现滚动条则包括滚动条的距离
+
+2.用基础事件封装一个点击事件和滑动事件
+思路：手指按下的位置和离开的位置相同
+    滑动事件思路：  
+        1.按下时候的位置 和 离开时候的位置是否一样
+
+        2.如果是水平滑动：
+
+              水平的距离 &gt; 垂直距离
+
+
+              从左向右滑动：     开始位置 &lt; 结束位置
+
+              从右向左滑动：     开始位置 &gt; 结束位置
+
+        3. 如果是垂直滑动
+
+               垂直距离 &gt; 水平距离
+
+               从上向下滑动：   开始位置 &lt; 结束位置
+
+               从下向上滑动：   开始位置 &gt; 结束位置
+
+3.在移动端的轮播图可以用插件完成
+https://www.swiper.com.cn/
+    1. 下载文件
+    2. 引用文件</code></pre><h2 id="拓展H5中API"><a href="#拓展H5中API" class="headerlink" title="拓展H5中API"></a>拓展H5中API</h2><pre><code>1.文件读取
+
+    上传功能： 文件读取
+    步骤：  
+        1. 准备一个上传控件  (&lt;input type=&quot;file&quot;&gt;)
+
+        2. 给当前控件注册一个change事件
+
+        3. 在change事件中获取上传的资源信息
+
+        4. 用户上传的资源都在 files【伪数组，每一个资源都是以对象的形式保存】
+
+        5. 要读取文件的时候，需要创建一个读取器
+
+            例如： var reader = new FileReader();
+
+
+            事件： onload （当资源完全读取完成后就会触发的一个事件）
+
+            属性： result （获取最后的读取结果）
+
+            方法： readAsText()  :    以文本的形式读取文件（获取文件中的文字信息）
+
+                  readAsDataURL() :   将文件的路径读取处理
+
+        6. 注意： 不能直接获取读取结果，当前资源被读取完成后才能获取读取结果  
+2.本地存储
+
+☞ sessionStorage
+
+         保存数据
+         sessionStorage.setItem(键, 值);
+
+         获取数据
+         sessionStorage.getItem(键);
+
+         删除数据
+         sessionStorage.removeItem(键);
+
+         清空所有的数据
+         sessionStorage.clear();
+         总结：
+             1. 保存的数据是临时数据（页面关闭后，所有的数据都被自动清空）
+             2. sessionStorage保存的值只能在当前页面中访问
+             3. 保存数据的大小大约在 5M
+
+    ☞ localStorage
+        localStorage.setItem(键, 值);
+        localStorage.getItem(键);
+        localStorage.removeItem(键);
+        localStorage.clear();
+         总结：
+             1. 保存的数据是持久化的数据（页面关闭后，数据依然存在）；
+             2. localStorage 保存的数据可以在其他页面中访问
+             3. localStorage保存数据的大小大约在 20M
+3.多媒体API
+    ☞方法： 
+         play() 播放
+
+         pause() 暂停
+
+    ☞ 属性：
+         paused         是否暂停  （true| 暂停， flase | 正在播放）
+
+         currentTime    获取当前播放时间（单位是秒）  将秒转化为 时，分 ，秒
+
+             400秒 ===》   400 / 60 / 60
+
+                          400 / 60 % 60
+
+                          400 % 60
+
+         duration    获取当前多媒体的总时长（单位是秒）
+    ☞ 事件：
+         timeupdate    检测到当前视频正在播放
+    ☞ 跳播功能： 本质就是在设置当前播放时间
+         公式：
+
+         点击位置的宽度 ： 整个进度条的宽度 = 当前播放时间： 总时长
+
+         当前播放时间 =  点击位置的宽度 *  总时长 / 整个进度条的宽度
+
+         注意：
+            当前鼠标点击的位置 就是进度条的宽度</code></pre>
             <hr>
           </div>
           <br>
@@ -195,7 +605,7 @@
     <div class="d-none d-lg-block col-lg-2 toc-container">
       
   <div id="toc">
-    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
     <div id="tocbot"></div>
   </div>
 
@@ -228,7 +638,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -237,7 +647,7 @@
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+                 for="local-search-input">keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>

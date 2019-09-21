@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="en">
 
 
 
@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="John Doe">
   <meta name="keywords" content>
-  <title>Hexo</title>
+  <title>Hello</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -34,7 +34,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Hello</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -102,7 +102,7 @@
 
             
               <br>
-              <p>星期五, 八月 16日 2019, 2:25 下午</p>
+              <p>Friday, August 16th 2019, 2:25 pm</p>
             
           </div>
 
@@ -156,8 +156,10 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params">x,y,z</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x,y,z);</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">10</span>,<span class="number">20</span>);		<span class="comment">// 10,20，undefined</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">function fn (x,y,z){
+    console.log(x,y,z);
+}
+fn(10,20);        // 10,20，undefined</code></pre>
 <h3 id="4-函数的返回值以及函数的状态"><a href="#4-函数的返回值以及函数的状态" class="headerlink" title="4.函数的返回值以及函数的状态"></a>4.函数的返回值以及函数的状态</h3><ul>
 <li>函数可以分为：<ul>
 <li>有返回值的函数</li>
@@ -179,8 +181,11 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> num = x + y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f = fn(<span class="number">10</span>,<span class="number">20</span>);</span><br><span class="line"><span class="built_in">console</span>.log(f);		<span class="comment">//	undefined</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">function fn (x,y){
+    var num = x + y;
+}
+var f = fn(10,20);
+console.log(f);        //    undefined</code></pre>
 <h3 id="5-作用域以及作用域链"><a href="#5-作用域以及作用域链" class="headerlink" title="5. 作用域以及作用域链"></a>5. 作用域以及作用域链</h3><ul>
 <li><p>全局作用域</p>
 <ul>
@@ -206,8 +211,12 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  	<span class="keyword">var</span> num = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(num);	<span class="comment">// 	10</span></span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line"><span class="built_in">console</span>.log(num);	<span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">function fn(){
+      var num = 10;
+    console.log(num);    //     10
+}
+fn();
+console.log(num);    // undefined</code></pre>
 <h3 id="6-js的预解析机制"><a href="#6-js的预解析机制" class="headerlink" title="6.js的预解析机制"></a>6.js的预解析机制</h3><ul>
 <li>预解析是什么：一个js引擎去解析的时候，他会把函数声明和变量进行提升，==函数声明提升到最前面，高于变量==</li>
 <li>预解析总结：<ul>
@@ -217,8 +226,21 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fn();</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line"><span class="keyword">var</span> fn = <span class="number">20</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果：2,2,**fn is not a function**</span></span><br><span class="line"><span class="comment">/* 分析：1.两个函数名字一样，后面的函数把前面的函数重新赋值了，最后调用函数的结果就是两次2</span></span><br><span class="line"><span class="comment">		2.var fn = 20；已经把fn函数，给重新复制成了一个number类型，最后调用函数就会报出fn is not a function，同时，后续代码将不再解析执行</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<pre><code class="js">fn();
+function fn(){
+    console.log(1);
+}
+fn();
+var fn = 20;
+function fn(){
+    console.log(2);
+}
+fn();
 
+// 结果：2,2,**fn is not a function**
+/* 分析：1.两个函数名字一样，后面的函数把前面的函数重新赋值了，最后调用函数的结果就是两次2
+        2.var fn = 20；已经把fn函数，给重新复制成了一个number类型，最后调用函数就会报出fn is not a function，同时，后续代码将不再解析执行
+*/</code></pre>
 <h3 id="7-函数的this指向"><a href="#7-函数的this指向" class="headerlink" title="7.函数的this指向"></a>7.函数的this指向</h3><ul>
 <li>this因为指向不确定，只有在最后调用了才能确定this的最终指向</li>
 <li>==this出现的几个主要场景：==<ul>
@@ -230,8 +252,10 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line">fn();		<span class="comment">// 指向window</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">function fn(){
+    console.log(this);
+}
+fn();        // 指向window</code></pre>
 <h3 id="8-函数的arguments对象的基本定义以及使用场景"><a href="#8-函数的arguments对象的基本定义以及使用场景" class="headerlink" title="8.函数的arguments对象的基本定义以及使用场景"></a>8.函数的arguments对象的基本定义以及使用场景</h3><ul>
 <li>基本的定义：<ul>
 <li>arguments本身也是一个对象，是一个比较特殊的对象</li>
@@ -251,18 +275,42 @@
 <h3 id="9-创建对象的3种方式"><a href="#9-创建对象的3种方式" class="headerlink" title="9.创建对象的3种方式"></a>9.创建对象的3种方式</h3><ul>
 <li>字面量方式创建对象</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    name:<span class="string">'jack'</span>,</span><br><span class="line">    age:<span class="number">18.</span></span><br><span class="line">    sayHi:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'你好，我是一个方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.sayHi();</span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">var obj = {
+    name:&#39;jack&#39;,
+    age:18.
+    sayHi:function(){
+        console.log(&#39;你好，我是一个方法&#39;);
+    }
+}
+obj.sayHi();</code></pre>
 <ul>
 <li>工厂模式创建对象</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    o.name = name;</span><br><span class="line">    o.age = age;</span><br><span class="line">    o.sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'你好，我是一个方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = person(<span class="string">'jack'</span>,<span class="number">18</span>);</span><br><span class="line">obj.sayHi();</span><br><span class="line"><span class="built_in">console</span>.log(obj.name);</span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">function person(name,age){
+    var o = new Object();
+    o.name = name;
+    o.age = age;
+    o.sayHi = function(){
+        console.log(&#39;你好，我是一个方法&#39;);
+    }
+    return o;
+}
+var obj = person(&#39;jack&#39;,18);
+obj.sayHi();
+console.log(obj.name);</code></pre>
 <ul>
 <li>自定义构造函数创建对象</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.sayHi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">'你好，我是一个方法'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Person(<span class="string">'jack'</span>,<span class="number">18</span>);</span><br><span class="line">obj.sayHi();</span><br><span class="line"><span class="built_in">console</span>.log(obj.name);</span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">function Person(name,age){
+    this.name = name;
+    this.age = age;
+    this.sayHi = function (){
+         console.log(&#39;你好，我是一个方法&#39;);
+    }
+}
+var obj = new Person(&#39;jack&#39;,18);
+obj.sayHi();
+console.log(obj.name);</code></pre>
 <ul>
 <li>现在掌握创建对象的基本方式就好</li>
 </ul>
@@ -295,7 +343,7 @@
     <div class="d-none d-lg-block col-lg-2 toc-container">
       
   <div id="toc">
-    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
     <div id="tocbot"></div>
   </div>
 
@@ -328,7 +376,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -337,7 +385,7 @@
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
           <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+                 for="local-search-input">keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
